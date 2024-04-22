@@ -14,11 +14,11 @@ include('includes/header.php');
 
 <main>
     <div class="container mx-auto p-4">
-        <h2 class="text-pink-600 text-4xl my-8 font-bold">Gallery of female artists (a.k.a MUVAS) carrying the music industry</h2>
+        <h2 class="text-pink-600 text-4xl my-8 font-bold drop-shadow-lg">Gallery of female pop artists (a.k.a Muvas!) carrying the music industry</h2>
 
         <?php if (isset($_SESSION['username'])) : ?>
-            <a href="add.php" class="text-2xl text-pink-700 hover:text-rose-300 flex items-center justify-end mb-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <a href="add.php" class="text-3xl text-pink-700 hover:text-rose-300 flex items-center justify-end mb-8">
+                <svg xmlns="http://www.w3org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
                 <span>Add a pop girlie</span>
@@ -42,7 +42,7 @@ include('includes/header.php');
 
 
                         <div class="border p-4">
-                            <h3 class="text-xl font-bold text-pink-900"><?php echo $stage_name ?></h3>
+                            <h3 class="text-2xl font-bold text-pink-900"><?php echo $stage_name ?></h3>
                             <a href="view.php?artist=<?php echo urlencode($stage_name) ?>" class="block text-center text-white bg-pink-400 p-2 mt-4 rounded-full hover:bg-rose-200 hover:text-black">View Artist</a>
                         </div>
 

@@ -24,11 +24,11 @@ include('includes/header.php');
         ?>
 
         <?php if (!$artist_details) : ?>
-            <h2 class="text-pink-600 text-5xl my-4">No Records Found</h2>
+            <h2 class="text-pink-600 text-5xl my-4 drop-shadow-lg">No Records Found</h2>
             <p class="mb-4"><strong><?php echo $artist_name ?></strong> is not registered in our system.</p>
 
         <?php else : ?>
-            <h2 class="text-pink-600 text-5xl mb-8 mt-4"><?php echo $artist_details['stage_name'] ?></h2>
+            <h2 class="text-pink-600 text-6xl mb-8 mt-4 drop-shadow-lg"><?php echo $artist_details['stage_name'] ?></h2>
 
             <div class="flex gap-4 flex-col md:flex-row">
                 <div class="md:flex-40">
@@ -37,12 +37,12 @@ include('includes/header.php');
 
                 <div class="md:flex-50">
                     <p class="mb-4 whitespace-pre-wrap"><?php echo $artist_details['artist_description'] ?></p>
-                    <p class="mb-4"><strong>Current record label:</strong> <?php echo $artist_details['current_label'] ?></p>
-                    <p class="mb-4"><strong>Debut Year:</strong> <?php echo $artist_details['debut_year'] ?></p>
-                    <p class="mb-4"><strong>Number of albums released:</strong> <?php echo $artist_details['num_of_albums'] ?> studio albums</p>
-                    <p class="mb-4"><strong>Latest album:</strong> <?php echo $artist_details['latest_album_name'] ?></p>
+                    <p class="mb-4"><strong class="text-xl" >Current record label:</strong> <?php echo $artist_details['current_label'] ?></p>
+                    <p class="mb-4"><strong class="text-xl" >Debut Year:</strong> <?php echo $artist_details['debut_year'] ?></p>
+                    <p class="mb-4"><strong class="text-xl" >Number of albums released:</strong> <?php echo $artist_details['num_of_albums'] ?> studio albums</p>
+                    <p class="mb-4"><strong class="text-xl" >Latest album:</strong> <?php echo $artist_details['latest_album_name'] ?></p>
                     <div class="mb-4">
-                        <p class="mb-4 font-bold">Grammy Wins:</p>
+                        <p class="mb-4 font-bold"><strong class="text-xl" >Grammy Wins:</strong></p>
 
                         
                         <?php
@@ -60,9 +60,9 @@ include('includes/header.php');
                         <?php endif ?>
         
                     </div>
-                    <p class="mb-4"><strong>Billboard Hot 100&trade;:</strong> <?php echo $artist_details['billboard_hot_100_count'] ?> No.1 hits!</p>
-                    <p class="mb-4"><strong>Fandom name:</strong> <?php echo $artist_details['fandom_name'] ?></p>
-                    <p class="mb-4"><strong>Instagram Followers:</strong> 
+                    <p class="mb-4"><strong class="text-xl" >Billboard Hot 100&trade;:</strong> <?php echo $artist_details['billboard_hot_100_count'] ?> No.1 hits!</p>
+                    <p class="mb-4"><strong class="text-xl" >Fandom name:</strong> <?php echo $artist_details['fandom_name'] ?></p>
+                    <p class="mb-4"><strong class="text-xl" >Instagram Followers:</strong> 
                         <?php 
                             echo ($artist_details['total_ig_followers'] < 100000000) ? number_format($artist_details['total_ig_followers'] / 1000000,1) : number_format($artist_details['total_ig_followers'] / 1000000,0) 
                         ?> Million</p>
