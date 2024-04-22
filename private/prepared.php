@@ -3,7 +3,6 @@
 // prepared statement for adding new artist
 $insert_statement = $connection->prepare("INSERT INTO pop_girlies (stage_name, artist_description, current_label, debut_year, num_of_albums, latest_album_name, num_of_grammy_wins, billboard_hot_100_count, fandom_name, instagram_link, total_ig_followers) 
                                             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ");
-
 // CREATE data into the database
 function insert_arist($stage_name, $artist_description, $current_label, $debut_year, $num_of_albums, $latest_album_name, $num_of_grammy_wins, $billboard_hot_100_count, $fandom_name, $instagram_link, $total_ig_followers) {
     global $connection;
@@ -107,7 +106,16 @@ function select_artist_by_name($name) {
     return $artist;
 }
 
+// DELETE 
+$delete_statement = $connection->prepare("DELETE FROM pop_girlies WHERE stage_name = ?;");
+function delete_artist($artist) {
+    global $connection;
+    global $delete_statement;
 
-
+    $delete_statement->bind_param("s", $artist);
+    if(!$delete_statement->execute()) {
+        handle_database_error("deleting artist");
+    }
+}
 
 ?>
