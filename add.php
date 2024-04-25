@@ -16,7 +16,7 @@ require('private/add-process.php');
 
 
 ?>
-
+<?php if (isset($_SESSION['username'])) : ?>
 <main>
     <div class="container mx-auto p-4 min-h-screen">
     <?php if (isset($message_add)) : ?>
@@ -116,10 +116,14 @@ require('private/add-process.php');
             </div>
         </form>
     </div>
-
-
 </main>
 
+<?php else:
+     header('Location: login.php')
+     
+     ?>
+
+<?php endif ?>
 
 <?php
 include('includes/footer.php');

@@ -13,8 +13,13 @@ include('includes/header.php');
 ?>
 
 <main>
+    <div>
+
+    </div>
+
+
     <div class="container mx-auto p-4">
-        <h2 class="text-pink-600 text-4xl my-8 font-bold drop-shadow-lg">Gallery of female pop artists (a.k.a Muvas!) carrying the music industry</h2>
+        <h2 class="text-pink-600 text-4xl my-8 font-bold drop-shadow-lg md:w-3/4">Gallery of female pop artists (a.k.a Muvas!) carrying the music industry</h2>
 
         <?php if (isset($_SESSION['username'])) : ?>
             <a href="add.php" class="text-3xl text-pink-700 hover:text-rose-300 flex items-center justify-end mb-8">
@@ -37,7 +42,7 @@ include('includes/header.php');
                     <div class="shadow-lg">
                         <!-- artist image -->
                         <div>
-                            <img class="rounded-t-lg w-full" src="img/thumbs/<?php echo $image_file_name ?>" alt="artist image">
+                            <img class="rounded-t-lg w-full" src="img/thumbs/<?php echo ($image_file_name != null) ? $image_file_name : 'placeholder.jpg' ?>" alt="artist image">
                         </div>
 
 

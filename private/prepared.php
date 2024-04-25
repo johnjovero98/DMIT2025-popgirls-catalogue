@@ -107,12 +107,12 @@ function select_artist_by_name($name) {
 }
 
 // DELETE 
-$delete_statement = $connection->prepare("DELETE FROM pop_girlies WHERE stage_name = ?;");
-function delete_artist($artist) {
+$delete_statement = $connection->prepare("DELETE FROM pop_girlies WHERE id = ?;");
+function delete_artist($id) {
     global $connection;
     global $delete_statement;
 
-    $delete_statement->bind_param("s", $artist);
+    $delete_statement->bind_param("i", $id);
     if(!$delete_statement->execute()) {
         handle_database_error("deleting artist");
     }

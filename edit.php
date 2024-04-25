@@ -6,9 +6,13 @@ $connection = db_connect();
 // import prepared statements
 require_once('private/prepared.php');
 
-
 // get the the arists name from the url
 $artist_name = $_GET['artist'];
+
+// redirect users if they tryna mess up the query string
+if ($artist_name === NULL) {
+    header("Location: index.php");
+}
 
 // change the doc title
 $document_title = "Edit Artist" . " | " . $artist_name;
@@ -20,6 +24,8 @@ $msg = $msg ?? "";
 require('private/edit-process.php');
 
 ?>
+
+<?php if (isset($_SESSION['username'])) : ?>
 
 <main>
     <div class="container mx-auto p-4 min-h-screen">
@@ -122,6 +128,12 @@ require('private/edit-process.php');
 
 </main>
 
+<?php else :
+    header('Location: login.php')
+
+?>
+
+<?php endif ?>
 
 <?php
 include('includes/footer.php');

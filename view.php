@@ -9,6 +9,12 @@ require_once('private/prepared.php');
 // get the the arists name from the url
 $artist_name = $_GET['artist'];
 
+
+// redirect users to home of they try to mess up the query string
+if ($artist_name === NULL) {
+    header('Location: index.php');
+}
+
 // change the doc title
 $document_title = "View Artist" . " | " . $artist_name;
 include('includes/header.php');
@@ -25,14 +31,14 @@ include('includes/header.php');
 
         <?php if (!$artist_details) : ?>
             <h2 class="text-pink-600 text-5xl my-4 drop-shadow-lg">No Records Found</h2>
-            <p class="mb-4"><strong><?php echo $artist_name ?></strong> is not registered in our system.</p>
+            <p class="mb-4"><strong class="text-3xl"><?php echo $artist_name ?>  </strong>is not registered in our system.</p>
 
         <?php else : ?>
             <h2 class="text-pink-600 text-6xl mb-8 mt-4 drop-shadow-lg"><?php echo $artist_details['stage_name'] ?></h2>
 
             <div class="flex gap-4 flex-col md:flex-row">
                 <div class="md:flex-40">
-                    <img class="rounded-lg shadow-2xl" src="img/full/<?php echo $artist_details['image_file_name'] ?>" alt="image of <?php echo $artist_details['stage_name']?> ">
+                    <img class="rounded-lg shadow-2xl" src="img/full/<?php echo ($artist_details['image_file_name'] != NULL) ? $artist_details['image_file_name'] : 'placeholder.jpg' ?>" alt="image of <?php echo $artist_details['stage_name']?> ">
                 </div>
 
                 <div class="md:flex-50">
