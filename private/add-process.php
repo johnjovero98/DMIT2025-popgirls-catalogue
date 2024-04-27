@@ -133,10 +133,10 @@ if (isset($_POST['add'])) {
     if ($form_good === true) {
         insert_arist($stage_name, $description, $record_label, $debut_year, $album_count, $latest_album, $grammy_wins, $billboard_no1, $fandom_name, $instagram_link, $instagram_followers);
 
-        $message_add = "succesfully updated $stage_name's info";
+        $message_add = "succesfully added $stage_name";
         $message_add .= "<p class=\"text-xl underline text-emerald-600 hover:text-pink-500\"><a href=\"view.php?artist=$stage_name\">see artist's details</a><p>";
     } else {
-        $message_add = `there is a problem updating $stage_name's info`;
+        $message_add = `there is a problem adding $stage_name's info`;
     }
 
 

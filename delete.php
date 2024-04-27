@@ -34,7 +34,6 @@ require('private/delete-process.php');
             <form class="bg-pink-50 p-8 md:px-28 shadow-lg" action="delete.php?artist=<?php echo urlencode($artist_details['stage_name']) ?>" method="POST">
                 <p class="mb-4 text-xl text-emerald-400"><?php echo $delete_message  ?></p>
             
-            
                 <h2 class="text-pink-600 text-5xl mb-8 mt-4">Are you sure you want to delete <strong class="block"><?php echo $_GET['artist'] ?> ?</strong></h2>
                 <!-- hidden-values -->
                 <input type="hidden" id="hidden-artist" name="hidden-artist" value="<?php echo $artist_name ?>">

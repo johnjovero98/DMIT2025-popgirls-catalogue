@@ -23,12 +23,7 @@ if (isset($_SESSION['username'])) {
     <section class="container mx-auto flex justify-center items-center p-8">
         <div class="p-8 mt-20 w-full md:w-1/2 bg-pink-50 md:px-28 shadow-lg">
             <h1 class="text-pink-600 text-4xl my-8 font-bold">Admin Login</h1>
-
-
             <p class="text-pink-900 mb-4"><?php echo $message; ?></p>
-
-
-
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                 <div class="mb-4">
                     <label for="username" class="form-label" class="text-lg">Username</label>
@@ -40,7 +35,7 @@ if (isset($_SESSION['username'])) {
                     <input class="block w-full border p-2 rounded-lg" type="password" id="password" name="password" class="form-control" required>
                 </div>
 
-                <input class="text-white bg-fuchsia-400 py-4 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black" type="submit" id="login" name="login" value="Log In" class="btn btn-primary mt-4 ">
+                <input class="text-white bg-fuchsia-400 py-2 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black" type="submit" id="login" name="login" value="Log In" class="btn btn-primary mt-4 ">
             </form>
         </div>
     </section>

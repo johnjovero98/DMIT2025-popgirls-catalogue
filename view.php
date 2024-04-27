@@ -38,7 +38,7 @@ include('includes/header.php');
 
             <div class="flex gap-4 flex-col md:flex-row">
                 <div class="md:flex-40">
-                    <img class="rounded-lg shadow-2xl" src="img/full/<?php echo ($artist_details['image_file_name'] != NULL) ? $artist_details['image_file_name'] : 'placeholder.jpg' ?>" alt="image of <?php echo $artist_details['stage_name']?> ">
+                    <img class="rounded-lg shadow-2xl aspect-[4/3] object-cover" src="img/full/<?php echo ($artist_details['image_file_name'] != NULL) ? $artist_details['image_file_name'] : 'placeholder.jpg' ?>" alt="image of <?php echo $artist_details['stage_name']?> ">
                 </div>
 
                 <div class="md:flex-50">
@@ -83,7 +83,7 @@ include('includes/header.php');
         <?php endif ?>
 
         <div class="flex justify-between mt-8">
-            <a href="index.php" class="inline-block text-center text-white bg-pink-400 p-2 px-8 rounded-full hover:bg-rose-200 hover:text-black">Return Home</a>
+            <a href="index.php" class="inline-block text-center text-white bg-pink-400 py-2 px-8 rounded-full hover:bg-rose-200 hover:text-black">Return Home</a>
 
 
             <?php if (isset($_SESSION['username'])) : ?>

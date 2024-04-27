@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Molle";
+  src: url(../fonts/molle-italic-webfont.woff);
+}
+
+  
+h1, h2,h3, strong {
+  font-family: "Molle";
+}
+
+#banner {
+  background-image: url('../img/banner-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  center bottom;
+}
+
+
+.active>.page-link, .page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #be185d;
+  border-color: #f472b6;
+}
+
+.page-link {
+  color: #f472b6;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #be185d;;
+  background-color: #fff1f2;
+  border-color: #fff1f2;
+}

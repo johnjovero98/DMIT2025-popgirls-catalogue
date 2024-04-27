@@ -50,6 +50,9 @@ require('private/edit-process.php');
 
                     <label for="img-file" class="text-2xl mb-4 block font-semibold">Upload Artist Image</label>
                     <input type="file" name="img-file" id="img-file">
+
+                    <input type="submit" id="update" name="update" value="Update <?php echo $artist_name ?>'s Photo" class="text-white bg-fuchsia-400 py-2 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black mt-8">
+
                 </div>
 
                 <!-- text info -->
@@ -114,7 +117,7 @@ require('private/edit-process.php');
 
 
             <div class="flex flex-col items-end justify-end">
-                <input type="submit" id="update" name="update" value="Update <?php echo $artist_name ?>'s Information" class="text-white bg-fuchsia-400 py-4 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black">
+                <input type="submit" id="update" name="update" value="Update <?php echo $artist_name ?>'s Information"  class="text-white bg-fuchsia-400 py-2 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black mt-8">
 
                 <a href="view.php?artist=<?php echo urlencode($artist_name) ?>" class="flex text-pink-700 hover:text-rose-300 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

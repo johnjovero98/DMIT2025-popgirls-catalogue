@@ -65,12 +65,14 @@ function handle_database_error($statement) {
 
 
 // Prepared statement for selecting all records.
-$select_statement = $connection->prepare("SELECT * FROM pop_girlies;");
+$select_statement = $connection->prepare("SELECT * FROM pop_girlies LIMIT ? OFFSET ?;");
 
 // selecting all artists
-function get_all_artists() {
+function get_all_artists($limit,$offset) {
     global $connection;
     global $select_statement;
+
+    $select_statement->bind_param("ii", $limit,$offset);
 
     if(!$select_statement->execute()) {
         handle_database_error("fetching artists");

@@ -106,7 +106,7 @@ require('private/add-process.php');
 
 
             <div class="flex flex-col items-end justify-end">
-                <input type="submit" id="add" name="add" value="Register This Pop Girl" class="text-white bg-fuchsia-400 py-4 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black">
+                <input type="submit" id="add" name="add" value="Register This Pop Girl" class="text-white bg-fuchsia-400 py-2 px-8 rounded-full inline-block hover:bg-rose-200 hover:text-black mt-8">
 
                 <a href="index.php" class="flex text-pink-700 hover:text-rose-300 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
