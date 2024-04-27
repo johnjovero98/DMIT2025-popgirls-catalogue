@@ -40,7 +40,7 @@ session_start();
                 <ul class="text-white flex gap-8 items-center">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="browse.php">Browse Pop Girlies</a></li>
-                    <li><a href="#">Advanced Search</a></li>
+                    <li><a href="search.php">Advanced Search</a></li>
                     
                     <li>
                         <?php if (isset($_SESSION['username'])) : ?>

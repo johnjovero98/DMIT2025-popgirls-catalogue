@@ -17,6 +17,8 @@ foreach ($active_filters as $filter => $filter_values) {
         if (count($range_queries) > 0) {
             $sql .= " AND (" . implode(" OR ", $range_queries) . ")";
         }
+
+        
     } else if (in_array($filter, ["billboard_hot_100_count"])) {
         foreach ($filter_values as $value) {
             list($min, $max) = explode("-", $value, 2);
